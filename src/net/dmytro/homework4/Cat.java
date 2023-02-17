@@ -1,9 +1,7 @@
 package net.dmytro.homework4;
 
 public class Cat extends Animal {
-   /* public Cat(int ranLength, int swimLength) {
-        super(ranLength, swimLength);
-    }*/
+
 
 
     @Override
