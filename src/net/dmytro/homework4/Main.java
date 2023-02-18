@@ -17,6 +17,8 @@ public class Main {
         dog1.ran(400);
         dog1.swim(0);
 
+        System.out.println("Numbers of dogs " + dog.getCount() + "\n" + "Numbers of cats " + cat.getCount() + "\n" + "Numbers of Animals " + (cat.getCount() + dog.getCount() - 2));
+
 
 
 

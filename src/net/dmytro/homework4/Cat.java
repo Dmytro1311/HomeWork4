@@ -2,7 +2,7 @@ package net.dmytro.homework4;
 
 public class Cat extends Animal {
 private String catName;
-private int number;
+private static int count = 0;
 
     public Cat(String catName) {
         this.catName = catName;
@@ -13,7 +13,7 @@ private int number;
         if (maxRan >= 0 ) {
             System.out.println("Cat " + catName +" run " + maxRan + " м");
         }
-        number++;
+        count++;
         }
 
 
@@ -24,6 +24,9 @@ private int number;
         } else {
             System.out.println("Cat " + catName + " swam " + maxSwim + " м");
         }
+    }
+    public int getCount(){
+        return count;
     }
 
 }
