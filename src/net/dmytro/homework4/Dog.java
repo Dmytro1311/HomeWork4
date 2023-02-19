@@ -1,33 +1,35 @@
 package net.dmytro.homework4;
 
 public class Dog extends Animal {
-private String dogName;
-private static int count = 0;
+    private String name;
+    private static int count;
 
-    public Dog(String dogName ) {
-        this.dogName = dogName;
 
-    }
-
-    @Override
-    void ran(int maxRan) {
-        if (maxRan >= 0)  {
-            System.out.println("Dog " + dogName + " run " + maxRan + " м");
-
-        }
+    public Dog(String name) {
+        this.name=name;
         count++;
+
+    }
+
+
+    @Override
+    void ran(int maxRanDistance, int distanceToDo) {
+        if (maxRanDistance >= distanceToDo && distanceToDo > 0 )  {
+            System.out.println("Dog " + name + " run " + distanceToDo + " м");
+        }
+
     }
 
     @Override
-    void swim(int maxSwim) {
-        if (maxSwim >= 0)  {
-            System.out.println("Dog " + dogName + " swam " + maxSwim + " м");
+    void swim(int maxSwimDistance, int distanceToDo) {
+        if (maxSwimDistance >= distanceToDo && distanceToDo >= 0)  {
+            System.out.println("Dog " + name + " swam " + distanceToDo + " м");
         }else {
             System.out.println("Dog can't swim ");
         }
 
     }
-    public int getCount(){
+    public static int getCount(){
         return count;
     }
 
