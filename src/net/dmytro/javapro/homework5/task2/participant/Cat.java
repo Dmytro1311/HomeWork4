@@ -1,13 +1,15 @@
 package net.dmytro.javapro.homework5.task2.participant;
 
-public class Robot implements Participant {
+import net.dmytro.javapro.homework5.task2.participant.Participant;
+
+public class Cat implements Participant {
     private String name;
     private boolean onDistance;
     private int maxRunDistance;
     private int maxJumpHeight;
 
 
-    public Robot(String name,int maxRunDistance, int maxJumpHeight) {
+    public Cat (String name, int maxRunDistance, int maxJumpHeight) {
         this.name = name;
         this.maxRunDistance = maxRunDistance;
         this.maxJumpHeight = maxJumpHeight;
@@ -43,7 +45,7 @@ public class Robot implements Participant {
 
     @Override
     public String getName() {
-        return "Robot " + name;
+        return "Cat " + name;
     }
 
 

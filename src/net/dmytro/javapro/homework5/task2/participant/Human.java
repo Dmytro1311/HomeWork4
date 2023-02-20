@@ -1,22 +1,21 @@
-package net.dmytro.javapro.homework5.task2.participant.liveparticipants;
+package net.dmytro.javapro.homework5.task2.participant;
 
 import net.dmytro.javapro.homework5.task2.participant.Participant;
 
-public abstract class LiveParticipants implements Participant {
+public class Human implements Participant {
     private String name;
     private boolean onDistance;
     private int maxRunDistance;
     private int maxJumpHeight;
 
 
-
-    public LiveParticipants(String name, int maxRunDistance, int maxJumpHeight) {
+    public Human(String name,int maxRunDistance, int maxJumpHeight) {
         this.name = name;
         this.maxRunDistance = maxRunDistance;
         this.maxJumpHeight = maxJumpHeight;
         this.onDistance = true;
-    }
 
+    }
     @Override
     public boolean onDistance() {
         return onDistance;
@@ -46,7 +45,7 @@ public abstract class LiveParticipants implements Participant {
 
     @Override
     public String getName() {
-        return this.name;
+        return "Human " + name;
     }
 
 
