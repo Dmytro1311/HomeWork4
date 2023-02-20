@@ -32,9 +32,13 @@ public class Team {
             }
         }
     }
-    public void doIt(Obstacle obstacles){
+    public void doIt(Obstacle obstacles[]){
         for (Participant participant : participants ){
-            obstacles.doIt(participant);
+            for (Obstacle obstacle : obstacles){
+               if (!obstacle.doIt(participant)){
+                   break;
+               }
+            }
 
         }
 

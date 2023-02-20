@@ -12,8 +12,13 @@ public  class Wall extends Obstacle {
     }
 
     @Override
-    public void doIt(Participant participant){
-        participant.jump(height);
+    public boolean doIt(Participant participant){
+       if (!participant.jump(height)){
+           return false;
+       }else {
+           return true;
+       }
+
 
     }
 

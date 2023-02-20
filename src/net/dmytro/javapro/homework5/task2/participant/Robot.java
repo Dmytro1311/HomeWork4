@@ -20,23 +20,25 @@ public class Robot implements Participant {
     }
 
     @Override
-    public void jump(int height) {
+    public boolean jump(int height) {
         if(height <= maxJumpHeight){
             System.out.println("Participent " + name + " passed the obstacle " + "Wall " + height + " m");
+            return true;
         }else {
             System.out.println("Participent "+  name + " didn't pass the obstacle" + "Wall " + height + " m");
-            onDistance = false;
+            return false;
         }
 
     }
 
     @Override
-    public void ran(int length) {
+    public boolean ran(int length) {
         if(length <= maxRunDistance){
             System.out.println("Participent " + name + " successfully ran distance " + length + " m");
+            return true;
         }else {
             System.out.println("Participent " + name + " couldn't run distance " + length + " m");
-            onDistance = false;
+            return false;
         }
 
     }
