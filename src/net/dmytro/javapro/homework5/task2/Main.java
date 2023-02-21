@@ -17,9 +17,10 @@ public class Main {
 
 
         Team team = new Team("FirstTeam",
-                new Cat("Meovka", 2, 5),
+                new Cat("Meovka", 4, 2),
                 new Human("Harry", 10,3),
                 new Robot("PX-one", 10, 5));
+
         team.getTeamInfo();
         team.doIt(obstacles);
         team.showResults();

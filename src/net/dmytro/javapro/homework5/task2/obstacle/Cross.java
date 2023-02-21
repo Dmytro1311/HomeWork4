@@ -13,14 +13,7 @@ public class Cross extends Obstacle {
 
     @Override
     public boolean doIt(Participant participant) {
-       if (!participant.ran(length)){
-           return false;
-       }else {
-           return true;
-       }
-
-
-
+       return participant.ran(length);
 
     }
 }
