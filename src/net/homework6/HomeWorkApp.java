@@ -55,11 +55,8 @@ public class HomeWorkApp {
         }
     }
     public static boolean checkSumm(int a, int b ){
-        if ( a + b > 10 && a + b < 20){
-            return true;
-        }else {
-            return false;
-        }
+       int summ = a + b;
+       return (summ > 10 && summ < 20);
 
     }
     public static void checkNumber(int value){
@@ -70,11 +67,7 @@ public class HomeWorkApp {
         }
     }
     public static boolean checkNumbersForNegativity(int number){
-        if(number >= 0){
-            return false;
-        } else {
-            return true;
-        }
+        return (number <= 0);
 
     }
     public static void  printSomeWords(String word,int n){
@@ -84,11 +77,7 @@ public class HomeWorkApp {
     }
     public static boolean checkYearIsLeap(){
         int year = 2023;
-        if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))){
-            return true;
-        }else {
-            return false;
-        }
+        return  ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)));
 
     }
 
