@@ -7,10 +7,10 @@ import java.util.Objects;
 
 public class Main {
     public static void main(String[] args){
-  //      System.out.println(findSymbolOccurance("Hello World", 'l'));
-  //      System.out.println(findWordPosition("Hello World", "World"));
-  //      System.out.println(stringReverse("Hello"));
- //       System.out.println(isPalindrome("rotator"));
+       System.out.println(findSymbolOccurance("Hello World", 'l'));
+        System.out.println(findWordPosition("Hello World", "World"));
+        System.out.println(stringReverse("Hello"));
+        System.out.println(isPalindrome("rotator"));
         wordsGame();
     }
     public static int findSymbolOccurance(String line, char symbol ){
