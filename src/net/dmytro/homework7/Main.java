@@ -3,7 +3,6 @@ package net.dmytro.homework7;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.Objects;
 
 public class Main {
     public static void main(String[] args){
@@ -25,18 +24,15 @@ public class Main {
 
     }
     public static int findWordPosition(String source, String target){
-        boolean str = source.contains(target);
-        if (str == true){
             return source.indexOf(target);
-        }else {
-            return -1;
+
         }
 
 
-    }
-    public static StringBuilder stringReverse(String line){
-        StringBuilder stringBuilder = new StringBuilder(line);
-         return stringBuilder.reverse();
+
+    public static String stringReverse(String line){
+
+         return new StringBuilder(line).reverse().toString();
     }
     public static boolean isPalindrome(String line){
         StringBuilder stringBuilder = new StringBuilder(line);
@@ -51,33 +47,21 @@ public class Main {
         System.out.println(randomName);
         System.out.println("You have to guess a word! It maybe one of the following:");
         System.out.println(Arrays.toString(words));
+
         String myGuess;
         StringBuilder lettersInPlace;
-        boolean answer = true;
+        boolean continueToInvent = true;
 
-        while (answer){
+        while (continueToInvent){
             System.out.println("Which word do you think I have selected?");
             myGuess = scanner.nextLine();
             if (myGuess.equals(randomName)){
                 System.out.println("Correct");
-                answer = false;
-            }else {
-                System.out.println("Wrong! But you have guessed the following letters in the word I have selected:");
-
-
+                continueToInvent = false;
             }
-
                 lettersInPlace = new StringBuilder("###############");
 
-
-            int shortestWordLenght;
-            if (randomName.length() < myGuess.length()){
-                shortestWordLenght = randomName.length();
-            }else {
-                shortestWordLenght = myGuess.length();
-            }
-
-            for (int i = 0; i < shortestWordLenght; i++){
+            for (int i = 0; i < Math.min(myGuess.length(), randomName.length()); i++){
                 if (myGuess.charAt(i) == randomName.charAt(i)){
                     lettersInPlace.setCharAt(i,myGuess.charAt(i));
                 }
