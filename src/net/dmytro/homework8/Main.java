@@ -8,7 +8,7 @@ public class Main {
        try {
             int result = doCalc(new String[][]{{"1", "a", "3", "4"}, {"5", "6", "7", "8"}, {"9", "10", "11", "12"}});
             System.out.println(result);
-        } catch (NegativeArraySizeException | ArrayIndexOutOfBoundsException ex) {
+        } catch (ArraySizeException | ArrayDataException ex) {
             System.out.println(ex.getMessage());
         }
 
@@ -16,7 +16,7 @@ public class Main {
         try {
             int result = doCalc(new String[][]{{"1", "2", "3", "4"}, {"5", "6", "7", "8"}, {"9", "10", "11", "12"}, {"9", "10", "11", "12"}});
             System.out.println(result);
-        } catch (NegativeArraySizeException | ArrayIndexOutOfBoundsException ex) {
+        } catch (ArraySizeException | ArrayDataException ex) {
             System.out.println(ex.getMessage());
         }
 
@@ -24,7 +24,7 @@ public class Main {
         try {
             int result = doCalc(new String[][]{{"1", "2", "a", "4"}, {"5", "6", "7", "8"}, {"9", "10", "11", "12"}, {"9", "10", "11", "12"}});
             System.out.println(result);
-        } catch (NegativeArraySizeException | ArrayIndexOutOfBoundsException ex) {
+        } catch (ArraySizeException | ArrayDataException ex) {
             System.out.println(ex.getMessage());
         }
 
